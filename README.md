@@ -13,6 +13,12 @@ So what it does. After commit it logs the commit's project path, time and commit
 git clone https://github.com/lauzis/commit-logger.git ~/.git-templates
 ```
 
+2. Allow to execute shell script
+```bash
+chmod a+x ~/.git/hooks/post-commit
+```
+
+
 2. Adding dir for commit logs
 ```bash
 mkdir ~/git_commit_logs
@@ -31,6 +37,3 @@ go to project root dir, where .git directory resides
 ```bash
 cp ~/.git-templates/hooks/post-commit ./.git/hooks/
 ```
-
-
-
