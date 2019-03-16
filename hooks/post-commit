@@ -8,7 +8,12 @@
 NOW=$(date +"%m-%d-%Y")
 LOGFILE="~/git_commit_logs/commits.$NOW.log"
 
+if [ ! -f "$LOGFILE" ]
+then
+	touch "$LOGFILE"
+fi
+
 echo "-----------------------------------" >> $LOGFILE
-pwd >> $LOGFILE 
-git log -1 --format="%cd %B" --date=iso >> $LOGFILE 
+pwd >> $LOGFILE
+git log -1 --format="%cd %B" --date=iso >> $LOGFILE
 echo "-----------------------------------" >> $LOGFILE
