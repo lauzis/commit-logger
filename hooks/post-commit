@@ -6,7 +6,7 @@
 # Add other post-commit hooks
 
 NOW=$(date +"%m-%d-%Y")
-LOGFILE="~/timer/commits.$NOW.log"
+LOGFILE="~/git_commit_logs/commits.$NOW.log"
 
 echo "-----------------------------------" >> $LOGFILE
 pwd >> $LOGFILE 
